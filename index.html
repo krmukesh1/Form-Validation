@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+  </head>
+  <body1 style="color: green;">
+    GeeksforGeeks
+</h1>
+<p>
+  Click on the button to create
+  a form dynamically
+</p>
+<button onClick="Check()">
+    click here
+</button>
+<p id="Checkp"></p>
+
+<script>
+    var down = document.getElementById("Checkp")
+
+    // craete a break line Element 
+    var br = document.createElement("br")
+    function Check(){
+        // Create a form synamically
+        var form = document.createElement("form")
+        form.setAttribute("method", "post")
+        form.setAttribute("action", "submit.php")
+
+        // Create an input element for Full Name
+        var FN = document.createElement("input")
+        FN.setAttribute("type", "text")
+        FN.setAttribute("placeholder", "FULL Name")
+        FN.setAttribute("name", "FULLName")
+
+         // Create an input element for date of birth
+        var DOB = document.createElement("input")
+        DOB.setAttribute("type", "text")
+        DOB.setAttribute("placeholder", "DOB")
+        DOB.setAttribute("name" , "dob")
+
+        // Create an input element for emailID
+        var Email = document.createElement("input")
+        Email.setAttribute("type", "text")
+        Email.setAttribute("placeholder", "Email")
+        Email.setAttribute("name" , "email")
+
+        // Create an input element for password
+        var Password = document.createElement("input")
+        Password.setAttribute("type" , "password")
+        Password.setAttribute("placeholder", "Password")
+        Password.setAttribute("name", "pass")
+
+        // Create an input element for retype-password
+        var retype = document.createElement("input")
+        retype.setAttribute("type", "password")
+        retype.setAttribute("name", "reTypePassword");
+        retype.setAttribute("placeholder", "ReEnter Password");
+    }
+</script>
+</body>
+</html>
