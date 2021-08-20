@@ -6,92 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Validation</title>
   </head>
-  <body1 style="color: green;">
-    GeeksforGeeks
-</h1>
-<p>
-  Click on the button to create
-  a form dynamically
-</p>
-<button onClick="Check()">
-    click here
-</button>
-<p id="Checkp"></p>
+  <body style="color: green">
+    <h1>Js Form Creation</h1>
+    <p>Click on the button to create a form dynamically</p>
+    <button onClick="Check()">click here</button>
+    <p id="Checkp"></p>
 
-<script>
-    var down = document.getElementById("Checkp")
+    <script>
+      var down = document.getElementById("Checkp");
 
-    // craete a break line Element 
-    var br = document.createElement("br")
-    function Check(){
+      // craete a break line Element
+      var br = document.createElement("br");
+      function Check() {
         // Create a form synamically
-        var form = document.createElement("form")
-        form.setAttribute("method", "post")
-        form.setAttribute("action", "submit.php")
+        var form = document.createElement("form");
+        form.setAttribute("method", "post");
+        form.setAttribute("action", "submit.php");
 
         // Create an input element for Full Name
-        var FN = document.createElement("input")
-        FN.setAttribute("type", "text")
-        FN.setAttribute("placeholder", "FULL Name")
-        FN.setAttribute("name", "FULLName")
+        var FN = document.createElement("input");
+        FN.setAttribute("type", "text");
+        FN.setAttribute("placeholder", "FULL Name");
+        FN.setAttribute("name", "FULLName");
 
-         // Create an input element for date of birth
-        var DOB = document.createElement("input")
-        DOB.setAttribute("type", "date")
-        DOB.setAttribute("placeholder", "DOB")
-        DOB.setAttribute("name" , "dob")
+        // Create an input element for date of birth
+        var DOB = document.createElement("input");
+        DOB.setAttribute("type", "date");
+        DOB.setAttribute("placeholder", "DOB");
+        DOB.setAttribute("name", "dob");
 
         // Create an input element for emailID
-        var Email = document.createElement("input")
-        Email.setAttribute("type", "email")
-        Email.setAttribute("placeholder", "Email")
-        Email.setAttribute("name" , "email")
+        var Email = document.createElement("input");
+        Email.setAttribute("type", "email");
+        Email.setAttribute("placeholder", "Email");
+        Email.setAttribute("name", "email");
 
         // Create an input element for password
-        var Password = document.createElement("input")
-        Password.setAttribute("type" , "password")
-        Password.setAttribute("placeholder", "Password")
-        Password.setAttribute("name", "pass")
+        var Password = document.createElement("input");
+        Password.setAttribute("type", "password");
+        Password.setAttribute("placeholder", "Password");
+        Password.setAttribute("name", "pass");
 
         // Create an input element for retype-password
-        var retype = document.createElement("input")
-        retype.setAttribute("type", "password")
-        retype.setAttribute("name", "reTypePassword")
-        retype.setAttribute("placeholder", "ReEnter Password")
+        var retype = document.createElement("input");
+        retype.setAttribute("type", "password");
+        retype.setAttribute("name", "reTypePassword");
+        retype.setAttribute("placeholder", "ReEnter Password");
 
-         // create a submit button
-         var S = document.createElement("input")
-         S.setAttribute("type", "submit")
-         S.setAttribute("value", "Submit")
+        // create a submit button
+        var S = document.createElement("input");
+        S.setAttribute("type", "submit");
+        S.setAttribute("value", "Submit");
 
-          // Append the full name input to the form
-          form.appendChild(FN); 
+        // Append the full name input to the form
+        form.appendChild(FN);
 
-           // Inserting a line break
-           form.appendChild(br.cloneNode()); 
-                  
-                  // Append the DOB to the form
-                  form.appendChild(DOB); 
-                  form.appendChild(br.cloneNode()); 
-                    
-                  // Append the emailID to the form
-                  form.appendChild(Email); 
-                  form.appendChild(br.cloneNode()); 
-                    
-                  // Append the Password to the form
-                  form.appendChild(Password); 
-                  form.appendChild(br.cloneNode()); 
-                    
-                  // Append the ReEnterPassword to the form
-                  form.appendChild(retype); 
-                  form.appendChild(br.cloneNode()); 
+        // Inserting a line break
+        form.appendChild(br.cloneNode());
 
-                  // Append the submit button to the form
-                form.appendChild(S); 
+        // Append the DOB to the form
+        form.appendChild(DOB);
+        form.appendChild(br.cloneNode());
 
-                document.getElementsByTagName("body")[0]
-               .appendChild(form);
-    }
-</script>
-</body>
+        // Append the emailID to the form
+        form.appendChild(Email);
+        form.appendChild(br.cloneNode());
+
+        // Append the Password to the form
+        form.appendChild(Password);
+        form.appendChild(br.cloneNode());
+
+        // Append the ReEnterPassword to the form
+        form.appendChild(retype);
+        form.appendChild(br.cloneNode());
+
+        // Append the submit button to the form
+        form.appendChild(S);
+
+        document.getElementsByTagName("body")[0].appendChild(form);
+      }
+    </script>
+  </body>
 </html>
