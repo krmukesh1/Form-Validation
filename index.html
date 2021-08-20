@@ -37,13 +37,13 @@
 
          // Create an input element for date of birth
         var DOB = document.createElement("input")
-        DOB.setAttribute("type", "text")
+        DOB.setAttribute("type", "date")
         DOB.setAttribute("placeholder", "DOB")
         DOB.setAttribute("name" , "dob")
 
         // Create an input element for emailID
         var Email = document.createElement("input")
-        Email.setAttribute("type", "text")
+        Email.setAttribute("type", "email")
         Email.setAttribute("placeholder", "Email")
         Email.setAttribute("name" , "email")
 
@@ -56,8 +56,41 @@
         // Create an input element for retype-password
         var retype = document.createElement("input")
         retype.setAttribute("type", "password")
-        retype.setAttribute("name", "reTypePassword");
-        retype.setAttribute("placeholder", "ReEnter Password");
+        retype.setAttribute("name", "reTypePassword")
+        retype.setAttribute("placeholder", "ReEnter Password")
+
+         // create a submit button
+         var S = document.createElement("input")
+         S.setAttribute("type", "submit")
+         S.setAttribute("value", "Submit")
+
+          // Append the full name input to the form
+          form.appendChild(FN); 
+
+           // Inserting a line break
+           form.appendChild(br.cloneNode()); 
+                  
+                  // Append the DOB to the form
+                  form.appendChild(DOB); 
+                  form.appendChild(br.cloneNode()); 
+                    
+                  // Append the emailID to the form
+                  form.appendChild(Email); 
+                  form.appendChild(br.cloneNode()); 
+                    
+                  // Append the Password to the form
+                  form.appendChild(Password); 
+                  form.appendChild(br.cloneNode()); 
+                    
+                  // Append the ReEnterPassword to the form
+                  form.appendChild(retype); 
+                  form.appendChild(br.cloneNode()); 
+
+                  // Append the submit button to the form
+                form.appendChild(S); 
+
+                document.getElementsByTagName("body")[0]
+               .appendChild(form);
     }
 </script>
 </body>
